@@ -1,4 +1,4 @@
-module github.com/tree-sitter-grammars/tree-sitter-hlsl
+module github.com/tree-sitter-grammars/tree-sitter-unreal-shader
 
 go 1.22
 

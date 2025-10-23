@@ -1,18 +1,18 @@
 from unittest import TestCase
 
 import tree_sitter
-import tree_sitter_hlsl
+import tree_sitter_unreal_shader
 
 
 class TestLanguage(TestCase):
     def test_can_load_grammar(self):
         try:
-            tree_sitter.Language(tree_sitter_hlsl.language())
+            tree_sitter.Language(tree_sitter_unreal_shader.language())
         except Exception:
             self.fail("Error loading HLSL grammar")
 
     def test_parse(self):
-        lang = tree_sitter.Language(tree_sitter_hlsl.language())
+        lang = tree_sitter.Language(tree_sitter_unreal_shader.language())
         parser = tree_sitter.Parser(lang)
         tree = parser.parse(
             bytes(

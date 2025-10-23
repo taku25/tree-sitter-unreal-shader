@@ -4,12 +4,12 @@
 //! tree-sitter [Parser][], and then use the parser to parse some code:
 //!
 //! ```
-//! use tree_sitter_hlsl::LANGUAGE_HLSL;
+//! use tree_sitter_unreal_shader::LANGUAGE_UNREAL_SHADER;
 //!
 //! let code = "";
 //! let mut parser = tree_sitter::Parser::new();
 //! parser
-//!     .set_language(&LANGUAGE_HLSL.into())
+//!     .set_language(&LANGUAGE_UNREAL_SHADER.into())
 //!     .expect("Error loading HLSL language");
 //! let tree = parser.parse(code, None).unwrap();
 //! ```
@@ -20,13 +20,13 @@
 use tree_sitter_language::LanguageFn;
 
 unsafe extern "C" {
-    fn tree_sitter_hlsl() -> *const ();
+    fn tree_sitter_unreal_shader() -> *const ();
 }
 
 /// Get the tree-sitter [LanguageFn][] for this grammar.
 ///
 /// [LanguageFn]: https://docs.rs/tree-sitter-language/*/tree_sitter_language/struct.LanguageFn.html
-pub const LANGUAGE_HLSL: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_hlsl) };
+pub const LANGUAGE_UNREAL_SHADER: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_unreal_shader) };
 
 /// The content of the [`node-types.json`][] file for this grammar.
 ///
@@ -42,13 +42,13 @@ pub const NODE_TYPES: &str = include_str!("../../src/node-types.json");
 
 #[cfg(test)]
 mod tests {
-    use crate::LANGUAGE_HLSL;
+    use crate::LANGUAGE_UNREAL_SHADER;
 
     #[test]
     fn test_can_load_grammar() {
         let mut parser = tree_sitter::Parser::new();
         parser
-            .set_language(&LANGUAGE_HLSL.into())
+            .set_language(&LANGUAGE_UNREAL_SHADER.into())
             .expect("Error loading HLSL language");
     }
 }

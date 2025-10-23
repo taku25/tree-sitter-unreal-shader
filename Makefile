@@ -1,6 +1,6 @@
 VERSION := 0.2.0
 
-LANGUAGE_NAME := tree-sitter-hlsl
+LANGUAGE_NAME := tree-sitter-unreal-shader
 
 # repository
 SRC_DIR := src

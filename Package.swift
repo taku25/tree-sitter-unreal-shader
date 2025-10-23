@@ -2,16 +2,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "TreeSitterHlsl",
+    name: "TreeSitterUnrealShader",
     platforms: [.macOS(.v10_13), .iOS(.v11)],
     products: [
-        .library(name: "TreeSitterHlsl", targets: ["TreeSitterHlsl"]),
+        .library(name: "TreeSitterUnrealShader", targets: ["TreeSitterUnrealShader"]),
     ],
     dependencies: [
         .package(url: "https://github.com/ChimeHQ/SwiftTreeSitter", from: "0.8.0"),
     ],
     targets: [
-        .target(name: "TreeSitterHlsl",
+        .target(name: "TreeSitterUnrealShader",
                 path: ".",
                 exclude: [
                     "Cargo.toml",
@@ -41,12 +41,12 @@ let package = Package(
                 publicHeadersPath: "bindings/swift",
                 cSettings: [.headerSearchPath("src")]),
          .testTarget(
-                name: "TreeSitterHlslTests",
+                name: "TreeSitterUnrealShaderTests",
                 dependencies: [
                     "SwiftTreeSitter",
-                    "TreeSitterHlsl",
+                    "TreeSitterUnrealShader",
                 ],
-                path: "bindings/swift/TreeSitterHlslTests")
+                path: "bindings/swift/TreeSitterUnrealShaderTests")
     ],
     cLanguageStandard: .c11
 )
