@@ -1,12 +1,12 @@
 {
   "grammars": [
     {
-      "name": "hlsl",
-      "camelcase": "Hlsl",
+      "name": "unreal_shader",
+      "camelcase": "UnrealShader",
       "scope": "source.cpp",
       "path": ".",
       "file-types": [
-        "hlsl"
+        "unreal_shader"
       ]
     }
   ],
@@ -16,11 +16,11 @@
     "description": "HLSL grammar for tree-sitter (based on tree-sitter-c",
     "authors": [
       {
-        "name": "Stephan Seitz"
+        "name": "taku25"
       }
     ],
     "links": {
-      "repository": "git://github.com/tree-sitter-grammars/tree-sitter-hlsl.git"
+      "repository": "git://github.com/taku25/tree-sitter-unreal-shader.git"
     }
   },
   "bindings": {

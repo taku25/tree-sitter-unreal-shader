@@ -1,9 +1,9 @@
 Metadata-Version: 2.4
-Name: tree-sitter-hlsl
+Name: tree-sitter-unreal-shader
 Version: 0.2.0
 Summary: Hlsl grammar for tree-sitter
 License: MIT
-Project-URL: Homepage, https://github.com/tree-sitter-grammars/tree-sitter-hlsl
+Project-URL: Homepage, https://github.com/taku25/tree-sitter-unreal-shader
 Keywords: incremental,parsing,tree-sitter,hlsl
 Classifier: Intended Audience :: Developers
 Classifier: License :: OSI Approved :: MIT License
