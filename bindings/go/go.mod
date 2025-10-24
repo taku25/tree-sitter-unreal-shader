@@ -1,4 +1,4 @@
-module github.com/tree-sitter-grammars/tree-sitter-unreal-shader
+module github.com/taku25/tree-sitter-unreal-shader
 
 go 1.22
 

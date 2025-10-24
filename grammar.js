@@ -1,7 +1,7 @@
 const CPP = require("tree-sitter-unreal-cpp/grammar")
 
 module.exports = grammar(CPP, {
-    name: 'unreal_shader',
+    name: 'ushader',
 
     conflicts: ($, original) => original.concat([
         [$.function_declarator],

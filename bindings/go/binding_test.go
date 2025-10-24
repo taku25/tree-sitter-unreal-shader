@@ -1,4 +1,4 @@
-package tree_sitter_unreal_shader_test
+package tree_sitter_ushader_test
 
 import (
 	"testing"
@@ -8,7 +8,7 @@ import (
 )
 
 func TestCanLoadGrammar(t *testing.T) {
-	language := tree_sitter.NewLanguage(tree_sitter_unreal_shader.Language())
+	language := tree_sitter.NewLanguage(tree_sitter_ushader.Language())
 	if language == nil {
 		t.Errorf("Error loading hlsl grammar")
 	}

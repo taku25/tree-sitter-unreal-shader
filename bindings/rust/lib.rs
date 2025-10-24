@@ -4,7 +4,7 @@
 //! tree-sitter [Parser][], and then use the parser to parse some code:
 //!
 //! ```
-//! use tree_sitter_unreal_shader::LANGUAGE_UNREAL_SHADER;
+//! use tree_sitter_ushader::LANGUAGE_UNREAL_SHADER;
 //!
 //! let code = "";
 //! let mut parser = tree_sitter::Parser::new();
@@ -20,13 +20,13 @@
 use tree_sitter_language::LanguageFn;
 
 unsafe extern "C" {
-    fn tree_sitter_unreal_shader() -> *const ();
+    fn tree_sitter_ushader() -> *const ();
 }
 
 /// Get the tree-sitter [LanguageFn][] for this grammar.
 ///
 /// [LanguageFn]: https://docs.rs/tree-sitter-language/*/tree_sitter_language/struct.LanguageFn.html
-pub const LANGUAGE_UNREAL_SHADER: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_unreal_shader) };
+pub const LANGUAGE_UNREAL_SHADER: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_ushader) };
 
 /// The content of the [`node-types.json`][] file for this grammar.
 ///

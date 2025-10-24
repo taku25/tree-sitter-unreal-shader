@@ -9,7 +9,7 @@ from wheel.bdist_wheel import bdist_wheel
 class Build(build):
     def run(self):
         if isdir("queries"):
-            dest = join(self.build_lib, "tree_sitter_unreal_shader", "queries")
+            dest = join(self.build_lib, "tree_sitter_ushader", "queries")
             self.copy_tree("queries", dest)
         super().run()
 
@@ -34,7 +34,7 @@ setup(
         Extension(
             name="_binding",
             sources=[
-                "bindings/python/tree_sitter_unreal_shader/binding.c",
+                "bindings/python/tree_sitter_ushader/binding.c",
                 "src/parser.c",
                 "src/scanner.c",
             ],

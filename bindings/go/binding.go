@@ -1,4 +1,4 @@
-package tree_sitter_unreal_shader_
+package tree_sitter_ushader
 
 // #cgo CFLAGS: -std=c11 -fPIC
 // #include "../../src/parser.c"
@@ -10,5 +10,5 @@ import "unsafe"
 
 // Get the tree-sitter Language for this grammar.
 func Language() unsafe.Pointer {
-	return unsafe.Pointer(C.tree_sitter_unreal_shader_())
+	return unsafe.Pointer(C.tree_sitter_ushader())
 }

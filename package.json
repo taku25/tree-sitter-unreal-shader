@@ -1,12 +1,13 @@
 {
-  "name": "tree-sitter-hlsl",
+  "name": "tree-sitter-unreal-shader",
   "version": "0.2.0",
   "description": "HLSL grammar for tree-sitter (based on tree-sitter-c",
   "main": "bindings/node",
   "types": "bindings/node",
   "keywords": [
     "parser",
-    "hlsl"
+    "hlsl",
+    "unreal_shader"
   ],
   "files": [
     "grammar.js",
@@ -36,6 +37,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tree-sitter-grammars/tree-sitter-hlsl.git"
+    "url": "git://github.com/taku25/tree-sitter-unreal-shader.git"
   }
 }
